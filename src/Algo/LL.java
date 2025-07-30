@@ -1,17 +1,17 @@
 package Algo;
 
 public class LL {
-    private Node head;
-    private Node tail;
-    private int size;
+    public Node head;
+    public Node tail;
+    public int size;
 
     public LL() {
         this.size = 0;
     }
 
-    private class Node {
-        private int val;
-        private Node next;
+    public class Node {
+        public int val;
+        public Node next;
 
         public Node(int val) {
             this.val = val;
@@ -23,13 +23,13 @@ public class LL {
         }
     }
 
-    public void display() {
+    public void display(String s) {
         Node temp = head;
         while (temp != null) {
-            System.out.print(temp.val + " -> ");
+            System.out.print(temp.val + s);
             temp = temp.next;
         }
-        System.out.println("NULL");
+        System.out.println("END");
     }
 
     public void insertFirst(int val) {
